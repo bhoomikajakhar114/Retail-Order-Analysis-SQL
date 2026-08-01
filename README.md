@@ -66,12 +66,22 @@ These tables are connected through **Customer ID**, **Order ID**, and **Product 
 **Objective**
 Display each order status along with: - Total number of orders
 - Percentage contribution of total orders in 2023
-  select order_status,count(*) As totalorders, count(*)*100.0/
-     (select count(*) from orders
-     where year(order_date)=2023)as percentage
-     from orders
-     where year(order_date)=2023
-     group by order_status;
+ ### SQL Query
+
+```sql
+SELECT
+    order_status,
+    COUNT(*) AS total_orders,
+    COUNT(*) * 100.0 /
+    (
+        SELECT COUNT(*)
+        FROM orders
+        WHERE YEAR(order_date) = 2023
+    ) AS percentage
+FROM orders
+WHERE YEAR(order_date) = 2023
+GROUP BY order_status;
+```
 
 **SQL Concepts**
 
