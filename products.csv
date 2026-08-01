@@ -1,0 +1,115 @@
+product_id,product_name,category,subcategory,brand,unit_of_measure,is_perishable,margin_tier,listed_price
+PRD0001,Bananas (1 dozen),Fruits & Vegetables,Fresh Fruits,FarmFresh,dozen,1,Low,41.79
+PRD0002,Royal Gala Apples (1 kg),Fruits & Vegetables,Fresh Fruits,FarmFresh,kg,1,Low,121.5
+PRD0003,Pomegranate (500g),Fruits & Vegetables,Fresh Fruits,OrganicNest,500g,1,Medium,100.28
+PRD0004,Mangoes Alphonso (1 kg),Fruits & Vegetables,Fresh Fruits,FarmFresh,kg,1,Medium,217.95
+PRD0005,Strawberries (200g),Fruits & Vegetables,Fresh Fruits,OrganicNest,200g,1,Medium,116.56
+PRD0006,Tomatoes (1 kg),Fruits & Vegetables,Fresh Vegetables,FarmFresh,kg,1,Low,52.07
+PRD0007,Onions (1 kg),Fruits & Vegetables,Fresh Vegetables,FarmFresh,kg,1,Low,51.23
+PRD0008,Spinach (250g),Fruits & Vegetables,Fresh Vegetables,FarmFresh,250g,1,Low,19.48
+PRD0009,Baby Carrots (500g),Fruits & Vegetables,Fresh Vegetables,OrganicNest,500g,1,Medium,69.77
+PRD0010,Potato (2 kg),Fruits & Vegetables,Fresh Vegetables,FarmFresh,2kg,1,Low,41.19
+PRD0011,Capsicum Mix (500g),Fruits & Vegetables,Fresh Vegetables,FarmFresh,500g,1,Low,53.75
+PRD0012,Broccoli (500g),Fruits & Vegetables,Fresh Vegetables,OrganicNest,500g,1,Medium,114.77
+PRD0013,Coriander Bunch,Fruits & Vegetables,Herbs & Sprouts,OrganicNest,bunch,1,Low,10.27
+PRD0014,Mint Leaves (100g),Fruits & Vegetables,Herbs & Sprouts,FarmFresh,100g,1,Low,14.58
+PRD0015,Amul Taaza Milk (1L Tetrapack),Dairy & Eggs,Milk,Amul,1L,1,Medium,72.55
+PRD0016,Mother Dairy Full Cream (500ml),Dairy & Eggs,Milk,Mother Dairy,500ml,1,Medium,35.27
+PRD0017,Nandini Toned Milk (1L),Dairy & Eggs,Milk,Nandini,1L,1,Medium,55.32
+PRD0018,Amul Masti Dahi (400g),Dairy & Eggs,Curd & Yoghurt,Amul,400g,1,High,49.12
+PRD0019,Epigamia Greek Yoghurt (90g),Dairy & Eggs,Curd & Yoghurt,Epigamia,90g,1,High,53.09
+PRD0020,Mother Dairy Mishti Doi (400ml),Dairy & Eggs,Curd & Yoghurt,Mother Dairy,400ml,1,High,38.06
+PRD0021,Amul Fresh Paneer (200g),Dairy & Eggs,Paneer & Cheese,Amul,200g,1,High,105.15
+PRD0022,Britannia Processed Cheese Slices,Dairy & Eggs,Paneer & Cheese,Britannia,pack,0,High,107.45
+PRD0023,Amul Butter (100g),Dairy & Eggs,Butter & Ghee,Amul,100g,0,High,58.4
+PRD0024,Milkmaid Condensed Milk (400g),Dairy & Eggs,Butter & Ghee,Nestlé,400g,0,High,133.11
+PRD0025,Farm Fresh Eggs (6 pc),Dairy & Eggs,Eggs,Country Delight,6 pack,1,Medium,74.14
+PRD0026,Farm Fresh Eggs (12 pc),Dairy & Eggs,Eggs,Country Delight,12 pack,1,Medium,111.12
+PRD0027,India Gate Basmati Rice (5 kg),Staples & Grains,Rice,India Gate,5kg,0,Medium,463.91
+PRD0028,Dawat Rozana Basmati (1 kg),Staples & Grains,Rice,Dawat,1kg,0,Medium,98.39
+PRD0029,Aashirvaad Whole Wheat Atta (5 kg),Staples & Grains,Atta & Flour,Aashirvaad,5kg,0,Medium,250.85
+PRD0030,Pillsbury Maida (1 kg),Staples & Grains,Atta & Flour,Pillsbury,1kg,0,Medium,57.07
+PRD0031,Tata Sampann Tur Dal (1 kg),Staples & Grains,Pulses,Tata Sampann,1kg,0,Medium,166.32
+PRD0032,Tata Sampann Moong Dal (500g),Staples & Grains,Pulses,Tata Sampann,500g,0,Medium,101.89
+PRD0033,Organic Chana Dal (500g),Staples & Grains,Pulses,24 Mantra,500g,0,High,113.77
+PRD0034,Uttam Sugar (1 kg),Staples & Grains,Sugar & Salt,Uttam,1kg,0,Low,51.73
+PRD0035,Tata Salt Lite (1 kg),Staples & Grains,Sugar & Salt,Tata Salt,1kg,0,Low,27.65
+PRD0036,Fortune Sunflower Oil (1L),Staples & Grains,Oil,Fortune,1L,0,Medium,151.56
+PRD0037,Saffola Gold Oil (1L),Staples & Grains,Oil,Saffola,1L,0,High,202.32
+PRD0038,Dhara Mustard Oil (1L),Staples & Grains,Oil,Dhara,1L,0,Medium,141.65
+PRD0039,Kellogg's Corn Flakes (500g),Packaged Foods,Breakfast Cereals,Kellogg's,500g,0,High,213.78
+PRD0040,Quaker Oats (500g),Packaged Foods,Breakfast Cereals,Quaker,500g,0,High,153.09
+PRD0041,Bagrry's Muesli (500g),Packaged Foods,Breakfast Cereals,Bagrry's,500g,0,High,222.27
+PRD0042,Maggi 2-Min Noodles (12 pack),Packaged Foods,Instant Noodles,Maggi,12 pack,0,High,141.37
+PRD0043,ITC Yippee Noodles (4 pack),Packaged Foods,Instant Noodles,Yippee,4 pack,0,High,58.42
+PRD0044,Parle-G Original (800g),Packaged Foods,Biscuits & Snacks,Parle,800g,0,Medium,54.34
+PRD0045,Britannia Good Day (200g),Packaged Foods,Biscuits & Snacks,Britannia,200g,0,Medium,35.8
+PRD0046,Lay's Classic Salted (73g),Packaged Foods,Biscuits & Snacks,Lay's,73g,0,High,21.86
+PRD0047,Haldiram's Aloo Bhujia (400g),Packaged Foods,Biscuits & Snacks,Haldiram's,400g,0,High,101.63
+PRD0048,Nescafé Classic Coffee (50g),Packaged Foods,Beverages,Nescafé,50g,0,High,167.51
+PRD0049,Tata Tea Gold (250g),Packaged Foods,Beverages,Tata Tea,250g,0,High,154.07
+PRD0050,Bru Instant Coffee (200g),Packaged Foods,Beverages,Bru,200g,0,High,238.24
+PRD0051,Red Bull Energy Drink (250ml),Packaged Foods,Beverages,Red Bull,250ml,0,High,117.4
+PRD0052,Del Monte Sweet Corn (420g),Packaged Foods,Canned & Preserved,Del Monte,420g,0,High,80.03
+PRD0053,Heinz Tomato Ketchup (500g),Packaged Foods,Canned & Preserved,Heinz,500g,0,High,138.01
+PRD0054,Maggi Hot & Sweet Sauce (400g),Packaged Foods,Sauces & Condiments,Maggi,400g,0,High,118.42
+PRD0055,Dr. Oetker Sandwich Spread (250g),Packaged Foods,Sauces & Condiments,Dr. Oetker,250g,0,High,115.85
+PRD0056,Nivea Soft Moisturiser (200ml),Personal Care,Skincare,Nivea,200ml,0,High,215.46
+PRD0057,Lakme Sun Expert SPF50 (50ml),Personal Care,Skincare,Lakme,50ml,0,High,284.41
+PRD0058,Himalaya Neem Face Wash (150ml),Personal Care,Skincare,Himalaya,150ml,0,High,121.6
+PRD0059,WOW Vitamin C Face Serum (30ml),Personal Care,Skincare,WOW,30ml,0,High,408.89
+PRD0060,Dove Intense Repair Shampoo (340ml),Personal Care,Haircare,Dove,340ml,0,High,315.87
+PRD0061,H&S Anti Dandruff (360ml),Personal Care,Haircare,Head & Shoulders,360ml,0,High,369.37
+PRD0062,Indulekha Bhringa Hair Oil (100ml),Personal Care,Haircare,Indulekha,100ml,0,High,227.0
+PRD0063,Colgate MaxFresh (150g),Personal Care,Oral Care,Colgate,150g,0,High,113.48
+PRD0064,Sensodyne Repair & Protect (75g),Personal Care,Oral Care,Sensodyne,75g,0,High,182.38
+PRD0065,Dove Soap Bar (125g),Personal Care,Body Care,Dove,125g,0,Medium,67.64
+PRD0066,Dettol Original Soap (75g),Personal Care,Body Care,Dettol,75g,0,Medium,47.31
+PRD0067,Whisper Ultra Thin (8 pads),Personal Care,Feminine Care,Whisper,8 pads,0,High,79.58
+PRD0068,Sofy Body Fit (30 pads),Personal Care,Feminine Care,Sofy,30 pads,0,High,181.28
+PRD0069,Ariel Matic Powder (3 kg),Home & Cleaning,Detergent,Ariel,3kg,0,Medium,574.97
+PRD0070,Surf Excel Easy Wash (3 kg),Home & Cleaning,Detergent,Surf Excel,3kg,0,Medium,504.1
+PRD0071,Tide Plus Powder (2 kg),Home & Cleaning,Detergent,Tide,2kg,0,Medium,324.77
+PRD0072,Vim Dishwash Liquid (750ml),Home & Cleaning,Dishwash,Vim,750ml,0,Medium,133.57
+PRD0073,Pril Power Gel (500ml),Home & Cleaning,Dishwash,Pril,500ml,0,Medium,116.91
+PRD0074,Colin Glass Cleaner (500ml),Home & Cleaning,Floor & Surface,Colin,500ml,0,Medium,119.44
+PRD0075,Lizol Disinfectant (500ml),Home & Cleaning,Floor & Surface,Lizol,500ml,0,Medium,147.94
+PRD0076,Harpic Power Plus (500ml),Home & Cleaning,Floor & Surface,Harpic,500ml,0,Medium,123.85
+PRD0077,Good Knight Power Activ+,Home & Cleaning,Fresheners & Repellents,Godrej,pack,0,Medium,177.01
+PRD0078,Ambi Pur Car Freshener,Home & Cleaning,Fresheners & Repellents,Ambi Pur,unit,0,High,277.53
+PRD0079,Kleenex Facial Tissues (100 sheets),Home & Cleaning,Tissues & Wipes,Kleenex,100 sheets,0,High,107.21
+PRD0080,Scotties Paper Towels (2 roll),Home & Cleaning,Tissues & Wipes,Scotties,2 roll,0,Medium,80.92
+PRD0081,Pampers Active Baby Pants (52 pc),Baby Care,Diapers,Pampers,52 pc,0,High,783.21
+PRD0082,Huggies Wonder Pants (56 pc),Baby Care,Diapers,Huggies,56 pc,0,High,689.15
+PRD0083,Nestlé Cerelac Wheat (300g),Baby Care,Baby Food,Nestlé,300g,0,High,218.38
+PRD0084,Farex Mixed Fruit (300g),Baby Care,Baby Food,Farex,300g,0,High,215.4
+PRD0085,Johnson's Baby Lotion (200ml),Baby Care,Baby Skincare,Johnson's,200ml,0,High,214.97
+PRD0086,Mamaearth Baby Body Wash (400ml),Baby Care,Baby Skincare,Mamaearth,400ml,0,High,309.26
+PRD0087,Wellman Tablets (30 pc),Health & Wellness,Vitamins & Supplements,Wellman,30 tablets,0,High,569.78
+PRD0088,Himalaya Ashwagandha (60 tablets),Health & Wellness,Vitamins & Supplements,Himalaya,60 tablets,0,High,223.02
+PRD0089,MuscleBlaze Whey Protein (1 kg),Health & Wellness,Vitamins & Supplements,MuscleBlaze,1kg,0,High,1335.36
+PRD0090,Centrum Advance (30 tablets),Health & Wellness,Vitamins & Supplements,Centrum,30 tablets,0,High,403.29
+PRD0091,Himalaya Liv 52 (100 tablets),Health & Wellness,OTC Medicines,Himalaya,100 tablets,0,High,133.84
+PRD0092,Vicks VapoRub (50g),Health & Wellness,OTC Medicines,Vicks,50g,0,High,115.31
+PRD0093,Horlicks Classic Malt (200g),Health & Wellness,Nutrition Drinks,Horlicks,200g,0,High,148.76
+PRD0094,Complan Chocolate (200g),Health & Wellness,Nutrition Drinks,Complan,200g,0,High,159.78
+PRD0095,McCain Smiles (600g),Frozen & Snacks,Frozen Veg,McCain,600g,1,High,197.54
+PRD0096,Safal Frozen Peas (500g),Frozen & Snacks,Frozen Veg,Safal,500g,1,Medium,84.16
+PRD0097,Real Good Chicken Nuggets (400g),Frozen & Snacks,Frozen Non-Veg,Godrej,400g,1,High,294.81
+PRD0098,Amul Pizza Pockets (6 pc),Frozen & Snacks,Frozen Non-Veg,Amul,6 pc,1,High,223.34
+PRD0099,Amul Vanilla Tub (1L),Frozen & Snacks,Ice Cream,Amul,1L,1,High,308.26
+PRD0100,Kwality Walls Cornetto,Frozen & Snacks,Ice Cream,Kwality Walls,unit,1,High,62.91
+PRD0101,Too Yumm! Multigrain Chips (75g),Frozen & Snacks,Chips & Namkeen,Too Yumm!,75g,0,High,30.11
+PRD0102,Haldiram's Moong Dal (200g),Frozen & Snacks,Chips & Namkeen,Haldiram's,200g,0,High,65.81
+PRD0103,Coca-Cola (2L Bottle),Beverages,Cold Drinks,Coca-Cola,2L,0,High,100.23
+PRD0104,Pepsi (2L Bottle),Beverages,Cold Drinks,Pepsi,2L,0,High,95.52
+PRD0105,Thums Up (600ml),Beverages,Cold Drinks,Thums Up,600ml,0,High,40.67
+PRD0106,Paper Boat Aam Panna (250ml),Beverages,Juices,Paper Boat,250ml,0,High,31.41
+PRD0107,Real Fruit Juice Mixed Fruit (1L),Beverages,Juices,Real,1L,0,High,118.35
+PRD0108,B Natural Orange Juice (1L),Beverages,Juices,B Natural,1L,0,High,110.22
+PRD0109,Bisleri Mineral Water (1L),Beverages,Water & Health Drinks,Bisleri,1L,0,Low,21.18
+PRD0110,Evocus Black Water (500ml),Beverages,Water & Health Drinks,Evocus,500ml,0,High,97.89
+PRD0111,Glucon-D Orange (200g),Beverages,Water & Health Drinks,Glucon-D,200g,0,Medium,72.52
+PRD0112,Pedigree Adult Chicken (3 kg),Pet Care,Dog Food,Pedigree,3kg,0,High,688.51
+PRD0113,Whiskas Adult Ocean Fish (1.2 kg),Pet Care,Cat Food,Whiskas,1.2kg,0,High,587.07
+PRD0114,Beaphar Anti-Tick Spray (150ml),Pet Care,Pet Supplies,Beaphar,150ml,0,High,410.19
