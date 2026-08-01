@@ -267,9 +267,6 @@ Retail-Order-Analysis-SQL
 │   └── Retail_Order_Analysis.sql
 │
 ├── README.md
-│
-└── Images (Optional)
-    └── ER_Diagram.png
 ```
 ---
 
@@ -329,6 +326,3 @@ Through this project, I gained hands-on experience in:
 
 
 
-## ⭐ If you found this project helpful
-
-If you like this project, consider giving it a ⭐ on GitHub!
