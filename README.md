@@ -60,13 +60,12 @@ These tables are connected through **Customer ID**, **Order ID**, and **Product 
 - Conditional Aggregation
 ---
 # 📊 Business Questions Solved
+---
 
-## 1️⃣ Order Status Distribution
+## Q1. Order Status Distribution
+Display each order status, its total number of orders, and its percentage of total orders placed in **2023**.
 
-**Objective**
-Display each order status along with: - Total number of orders
-- Percentage contribution of total orders in 2023
- ### SQL Query
+### SQL Query
 
 ```sql
 SELECT
@@ -82,85 +81,97 @@ FROM orders
 WHERE YEAR(order_date) = 2023
 GROUP BY order_status;
 ```
-
-**SQL Concepts**
-
-- GROUP BY
-- COUNT
-- Subquery
-- Percentage Calculation
-
 ---
+## Q2. City-wise Order Performance
+For each city, show:- Total Orders, Delivered Orders, Cancelled Orders
+Sort the results by total orders in descending order.
+### SQL Query
+```sql
+SELECT
+    city,
+    COUNT(*) AS total_orders,
+    SUM(
+        CASE
+            WHEN order_status = 'delivered' THEN 1
+            ELSE 0
+        END
+    ) AS delivered_orders,
+    SUM(
+        CASE
+            WHEN order_status = 'cancelled' THEN 1
+            ELSE 0
+        END
+    ) AS cancelled_orders
+FROM orders
+GROUP BY city
+ORDER BY total_orders DESC;
+```
+---
+## Q3. Promotional Campaign Analysis
+Compare promo and non-promo orders by showing:- Order Count, Average Order Value
+### SQL Query
+```sql
+SELECT
+    CASE
+        WHEN promo_code IS NULL OR TRIM(promo_code) = ''
+            THEN 'No Promo'
+        ELSE 'Promo'
+    END AS promo_type,
+    COUNT(*) AS total_orders,
+    AVG(net_order_value) AS average_order_value
+FROM orders
+GROUP BY promo_type;
+```
+---
+## Q4. Sales Channel Performance
+For each sales channel (App, Web, Kiosk), show:- Order Count, Total Net Revenue, Average Net Revenue per Order
+### SQL Query
+```sql
+SELECT
+    channel,
+    COUNT(*) AS total_orders,
+    SUM(net_order_value) AS total_revenue,
+    AVG(net_order_value) AS average_net_revenue
+FROM orders
+GROUP BY channel
+ORDER BY total_revenue DESC;
+```
+---
+## Q5. Membership Tier Analysis
+For each membership tier (Platinum, Gold, Silver, None), display:- Total Customers, Customers Who Placed Orders in 2023,Total Revenue,Average Order Value
+### SQL Query
+```sql
+SELECT
+    membership_tier,
+    COUNT(DISTINCT customers.customer_id) AS total_customers,
+    COUNT(DISTINCT orders.customer_id) AS customers_with_orders,
+    ROUND(SUM(net_order_value), 2) AS total_revenue,
+    ROUND(AVG(net_order_value), 2) AS average_order_value
+FROM customers
+LEFT JOIN orders
+ON customers.customer_id = orders.customer_id
+AND YEAR(order_date) = 2023
+GROUP BY membership_tier;
+```
+---
+## Q6. Monthly Revenue Analysis (2023)
 
-## 2️⃣ City-wise Order Performance
-**Objective**
-For each city, calculate:
-- Total Orders
-- Delivered Orders
-- Cancelled Orders
-Sort cities by highest number of orders.
-**SQL Concepts**
-- GROUP BY
-- CASE WHEN
-- SUM
-- COUNT
+Show monthly performance for 2023 including:- Total Orders,Total Net Revenue
+### SQL Query
+```sql
+SELECT
+    order_month,
+    COUNT(*) AS total_orders,
+    SUM(net_order_value) AS total_revenue
+FROM orders
+WHERE YEAR(order_date) = 2023
+GROUP BY order_month
+ORDER BY total_revenue DESC;
+```
 ---
-## 3️⃣ Promotional Campaign Analysis
-**Objective**
-Compare Promo and Non-Promo orders using:
-- Order Count
-- Average Order Value
-**SQL Concepts**
-- CASE WHEN
-- AVG
-- GROUP BY
----
-## 4️⃣ Sales Channel Analysis
-**Objective**
-Compare performance of:
-- App
-- Web
-- Kiosk
-Metrics:
-- Total Orders
-- Total Net Revenue
-- Average Revenue per Order
-**SQL Concepts**
-- GROUP BY
-- SUM
-- AVG
----
-## 5️⃣ Membership Tier Analysis
-**Objective**
+## Q7. Sales Channel KPI Report
 
-For each membership tier:
-- Total Customers
-- Customers who placed at least one order in 2023
-- Total Revenue
-- Average Order Value
-Includes customers with zero orders using **LEFT JOIN**.
-**SQL Concepts**
-- LEFT JOIN
-- COUNT DISTINCT
-- SUM
-- AVG
----
-## 6️⃣ Monthly Revenue Analysis
-**Objective**
-Generate monthly sales performance for 2023.
-Metrics:
-- Total Orders
-- Total Net Revenue
-**SQL Concepts**
-- GROUP BY
-- SUM
-- COUNT
-- Date Filtering
----
-
-## 7️⃣ Channel Performance KPI Report
-**Objective**
-Generate channel-wise business KPIs including:
+Generate a KPI report for each sales channel including:
 - Total Orders
 - Delivered Orders
 - Cancelled Orders
@@ -168,31 +179,71 @@ Generate channel-wise business KPIs including:
 - Gross Revenue
 - Promo Discounts
 - Net Revenue
-**SQL Concepts**
-- CASE WHEN
-- SUM
-- COUNT
-- GROUP BY
+### SQL Query
+
+```sql
+SELECT
+    channel,
+    COUNT(*) AS total_orders,
+    SUM(
+        CASE
+            WHEN order_status = 'delivered' THEN 1
+            ELSE 0
+        END
+    ) AS delivered_orders,
+    SUM(
+        CASE
+            WHEN order_status = 'cancelled' THEN 1
+            ELSE 0
+        END
+    ) AS cancelled_orders,
+    SUM(
+        CASE
+            WHEN order_status = 'returned' THEN 1
+            ELSE 0
+        END
+    ) AS returned_orders,
+    SUM(gross_order_value) AS total_gross_revenue,
+    SUM(promo_discount_amt) AS total_promo_discount,
+    SUM(net_order_value) AS total_net_revenue
+FROM orders
+GROUP BY channel;
+```
 ---
-## 8️⃣ Product Return Analysis
-**Objective**
-Compare return performance between:
-- Perishable Products
-- Non-Perishable Products
-Metrics:
+## Q8. Product Return Analysis
+
+Compare **Perishable** and **Non-Perishable** products by showing:
 - Total Order Lines
 - Returned Lines
 - Return Percentage
-**SQL Concepts**
-- INNER JOIN
-- CASE WHEN
-- Conditional Aggregation
----
+### SQL Query
+```sql
+SELECT
+    CASE
+        WHEN p.is_perishable = 1 THEN 'Perishable'
+        ELSE 'Non-Perishable'
+    END AS product_type,
+    COUNT(*) AS total_lines,
+    SUM(
+        CASE
+            WHEN oi.item_return_flag = 1 THEN 1
+            ELSE 0
+        END
+    ) AS returned_lines,
+    SUM(
+        CASE
+            WHEN oi.item_return_flag = 1 THEN 1
+            ELSE 0
+        END
+    ) * 100.0 / COUNT(*) AS return_percentage
+FROM order_items oi
+JOIN products p
+ON oi.product_id = p.product_id
+GROUP BY product_type;
+```
 
 # 📈 Key Business Insights
-
 This project helps answer questions such as:
-
 - Which order status is most common?
 - Which cities generate the highest number of orders?
 - Do promotional campaigns improve sales?
@@ -202,7 +253,6 @@ This project helps answer questions such as:
 - Which channel performs best overall?
 - Are perishable products returned more often than non-perishable products?
 ---
-
 # 📂 Project Structure
 ```
 Retail-Order-Analysis-SQL
